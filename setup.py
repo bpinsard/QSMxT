@@ -42,12 +42,13 @@ setup(
         'qsm-forward==0.22',
         'osfclient',
         'niflow-nipype1-workflows',
-        'tensorflow',
         'packaging',
-        'nextqsm',
         'matplotlib',
         'pandas'
     ],
+    extras_require = {
+        'nextqsm':  ["tensorflow", "nextqsm"],
+    },
     entry_points={
         'console_scripts': [
             'qsmxt = qsmxt.cli.main:main',
